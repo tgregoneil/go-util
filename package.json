@@ -1,0 +1,20 @@
+{
+  "name": "go-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [],
+  "author": "T. Greg O'Neil <go22.npm@gmail.com> (http://tgregoneil.com)",
+  "license": "ISC",
+  "homepage": "https://github.com/tgregoneil/go-util",
+  "repository": {
+    "url": "git+https://github.com/tgregoneil/go-util.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/tgregoneil/key1/issues"
+  }
+}
