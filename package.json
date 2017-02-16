@@ -12,7 +12,7 @@
   "license": "ISC",
   "homepage": "https://github.com/tgregoneil/go-util",
   "repository": {
-    "url": "git+https://github.com/tgregoneil/go-util.git",
+    "url": "git+ssh://github.com/tgregoneil/go-util.git",
     "type": "git"
   },
   "bugs": {
