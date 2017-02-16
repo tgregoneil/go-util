@@ -1,6 +1,6 @@
 {
   "name": "go-util",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "readme": "readme.md",
@@ -16,7 +16,7 @@
     "type": "git"
   },
   "dependencies": {
-    "key": "*"
+    "key1": "*"
   },
   "bugs": {
     "url": "https://github.com/tgregoneil/go-util/issues"
