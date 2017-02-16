@@ -18,7 +18,7 @@ var P = {};
 //---------------------
 P.pCheck = (p, pDefault) => {
     // ditches any parameters supplied in p that aren't present in pDefault
-    // if a param is important to a routine, then it should be defined in pDefault
+    // if a param is necessary to a routine, then it should be defined in pDefault
     
     var res = {};
 
