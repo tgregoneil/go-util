@@ -2,10 +2,14 @@
 // test.js
 
 var ut = require ('go-util');
+var uti = require ('util').inspect;
 
 var isOb = ut.isOb;
 var pCheck = ut.pCheck;
 var key1 = ut.key1;
+
+var dds = ut.dollarDotSubUnicode;
+var ddsR = ut.dollarDotSubUnicodeRestore;
 
 var res = isOb ({a: true, b: false});
 console.log ('res: ' + res); // true
@@ -35,5 +39,31 @@ var f = function (params) {
 
 f (p);
 
+
+
+var doSubstitute = function (ob) {
+    
+    console.log("==== objects with '$' and '.' in key names ====");
+    console.log(uti(ob));
+    console.log ('');
+
+    console.log("==== After substitution with equivalent unicode representations ====");
+    ob = dds(ob);
+    console.log(uti(ob));
+    console.log ('');
+
+    console.log("==== Objects restored with '$' and '.' in key names as originally ====");
+    ob = ddsR(ob);
+    console.log(uti(ob));
+    console.log ('\n\n');
+
+};  // end doSubstitute 
+
+    
+var ob = { '$$abc': 1, 'a.b.c': 2, ZZ: { '$urhere$': 'this.is.it', 'dot.some.more': 'something' } };
+doSubstitute(ob);
+
+ob = { a: [{'$a1$.b':13, '$b1..':14}]};
+doSubstitute(ob);
 
 
