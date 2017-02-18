@@ -1,7 +1,7 @@
 
 ### go-util 
 
-utilities used for 'go' projects
+utilities used by 'go' packages
 
 ### Installation
 ```shell
