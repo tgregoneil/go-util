@@ -78,6 +78,15 @@ var P = {};
 
 
 //---------------------
+P.cloneOb = (ob) => {
+    // assumes no values that are function types
+    
+    return JSON.parse (JSON.stringify (ob));
+
+}; // end P.cloneOb 
+
+
+//---------------------
 P.dollarDotSubUnicode = (ob) => {
     
     return _.ddsDoIt (ob, true);
@@ -91,6 +100,63 @@ P.dollarDotSubUnicodeRestore = (ob) => {
     return _.ddsDoIt (ob, false);
 
 };  // end dollarDotSubUnicodeRestore
+
+
+//---------------------
+P.isEmpty = (item) => {
+    
+    var res = false;
+
+    switch (typeof item) {
+
+        case 'string':
+
+            res = item.length === 0;
+            break;
+
+        case 'undefined':
+
+            res = true;
+            break;
+
+        case 'object':
+
+            if (P.isOb (item)) {
+
+                var keys = Object.keys (item);
+                res = keys.length === 0;
+
+            } else if (item === null) {
+
+                res = true;
+
+            } else if (isArray (item)) {
+
+                res = item.length === 0;
+
+            } else {
+
+                res = null;  // case shouldn't happen, so set to null if it does
+
+            } // end if (P.isOb (item))
+            
+            break;
+
+        case 'boolean':
+
+            res = !item;
+            break;
+
+        case 'number':
+
+            res = number === 0;
+            break;
+
+    } // end switch (typeof item)
+    
+
+    return res;
+}; // end P.isEmpty 
 
 
 //---------------------
