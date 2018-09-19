@@ -67,3 +67,6 @@ ob = { a: [{'$a1$.b':13, '$b1..':14}]};
 doSubstitute(ob);
 
 
+console.log ("==== dumpOb ({x: [3,4,{r: ['a', true], s: {yes:'sir'}}], a: {u: true, v: 'st\"qt'}}");
+var s = ut.dumpOb ({x: [3,4,{r: ['a', true], s: {yes:'sir'}}, {}, []], a: {u: true, v: 'st"qt', w: "st'qt", x: 'at\'cc"more stuff'}});
+console.log (s);
