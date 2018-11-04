@@ -207,7 +207,7 @@ P.dumpOb = (ob, depth) => {
 
 
     //---------------------
-    var dumpKeyPair = (ob, key) => {
+    var dumpKeyPair = (ob, key, noKey) => {
     
         var prefix = topKey ();
 
@@ -216,7 +216,7 @@ P.dumpOb = (ob, depth) => {
 
         keys.push (key);
         res += prefix !== "" ? prefix + '.' : "";
-        res += key + ': ';
+        res += noKey ? "" : key + ': ';
 
         if (key === '_id' && P.isOb (val) && val.hasOwnProperty ('_bsontype') && val._bsontype === 'ObjectID') {
 
@@ -287,7 +287,7 @@ P.dumpOb = (ob, depth) => {
     
                 for (var i = 0; i < ob.length; i++) {
     
-                    res += dumpKeyPair (ob, i);
+                    res += dumpKeyPair (ob, i, true);
     
                 } // end for (var i = 0; i < ob.length; i++)
     
