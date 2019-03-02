@@ -411,6 +411,17 @@ P.isOb = (ob) => {
 }; // end P.isOb 
 
 
+//---------------------
+P.k1A = (Ob) => {
+    
+    var k1 = Object.keys (Ob)[0];
+    var v1 = Ob [k1];
+
+    return [k1, v1];
+
+}; // end P.k1A 
+
+
 P.key1 = v.key1;
 
 
